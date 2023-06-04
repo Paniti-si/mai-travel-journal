@@ -5,7 +5,7 @@ function openModal() {
 
 // Close the Modal
 function closeModal() {
-  fade(document.getElementById("myModal"));
+  fade(document.getElementById("myModal"), true);
 }
 
 var slideIndex = 1;
@@ -45,25 +45,27 @@ function showSlides(n) {
 
 window.onclick = function (event) {
   if (event.target.id === "myModal") {
-    fade(document.getElementById("myModal"));
+    fade(document.getElementById("myModal"), true);
   }
 };
 
-function fade(element) {
+function fade(element, isNone = true, time = 10, multiplyer = 0.3) {
   var op = 1; // initial opacity
   var timer = setInterval(function () {
-    if (op <= 0.1) {
+    if (op <= 0.001) {
       clearInterval(timer);
-      element.style.display = "none";
+      if (isNone) {
+        element.style.display = "none";
+      }
     }
     element.style.opacity = op;
     element.style.filter = "alpha(opacity=" + op * 100 + ")";
-    op -= op * 0.3;
-  }, 10);
+    op -= op * multiplyer;
+  }, time);
 }
 
-function unfade(element) {
-  var op = 0.1; // initial opacity
+function unfade(element, time = 10, multiplyer = 0.3, startOp = 0.1) {
+  var op = startOp; // initial opacity
   element.style.display = "block";
   var timer = setInterval(function () {
     if (op >= 1) {
@@ -71,6 +73,29 @@ function unfade(element) {
     }
     element.style.opacity = op;
     element.style.filter = "alpha(opacity=" + op * 100 + ")";
-    op += op * 0.3;
-  }, 10);
+    op += op * multiplyer;
+  }, time);
 }
+
+function bannerAnimation() {
+  var banner = document.getElementById("front-banner");
+  var bannerText = document.getElementById("banner-text");
+  var bannerImage = document.getElementById("banner-image");
+
+  setTimeout(function () {
+    bannerText.style.fontSize = "5vw";
+    bannerText.innerHTML = "Suan Phueng, Ratchaburi";
+  }, 2000);
+
+  setTimeout(function () {
+    bannerText.style.fontSize = "10vw";
+    bannerText.innerHTML = "Solo Trip";
+  }, 4000);
+
+  setTimeout(function () {
+    fade(banner, false, 50, 0.1);
+    unfade(bannerImage, 20, 0.1, 0.5);
+  }, 6000);
+}
+
+bannerAnimation();

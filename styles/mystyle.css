@@ -4,6 +4,10 @@ body {
 }
 
 body {
+  margin: 0;
+}
+
+.blog-body{
   background: rgb(66, 128, 91);
   background: linear-gradient(
     0deg,
@@ -63,7 +67,7 @@ body {
 .modal {
   display: none;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -187,3 +191,84 @@ img.hover-shadow {
   max-height: 10vh;
   margin: auto;
 }
+
+#banner {
+  display: flex;
+  position: relative;
+  vertical-align: middle;
+  background-color: #ffffff;
+  width: 100%;
+  height: 500px;
+  max-height: 100vh;
+  /* font-size: 20vh;
+  font-family: "Courier New", monospace;
+  text-align: center; */
+  align-items: center;
+  justify-content: center;
+  /* animation: b-fade 5s linear;
+  animation-fill-mode: forwards; */
+}
+
+#front-banner, #banner-image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#front-banner {
+  display: flex;
+  vertical-align: middle;
+  background-color: #505050;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+#banner-text {
+  color: rgb(255, 255, 255);
+  font-size: 10vw;
+  font-family: "Courier New", monospace;
+}
+
+#banner-image {
+  opacity: 0.5;
+  display: flex;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* #banner-text::after {
+  content: "";
+  animation: b-text 10s linear;
+}
+
+@keyframes b-text {
+  0% {
+    content: "6 June 2023";
+  }
+  20% {
+    content: "7 June 2023";
+  }
+  30% {
+    content: "8 June 2023";
+  }
+  100% {
+    content: "";
+  }
+}
+
+/* #banner:after {
+  animation: b-fade 15s linear;
+} */
+
+@keyframes b-fade {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+} */

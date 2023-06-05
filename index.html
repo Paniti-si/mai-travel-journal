@@ -14,83 +14,50 @@
         src="https://drive.google.com/uc?export=view&id=1syMe4oEXCnRi0b8eXRsjtgnn8AnbcHxj"
       />
     </div>
-    <div class="row">
-      <div class="column-image">
-        <img
-          src="https://drive.google.com/uc?export=view&id=1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4"
-          onclick="openModal();currentSlide(1)"
-          class="hover-shadow"
-        />
-      </div>
+    <div class="blog-body">
+      <div class="row">
+        <div class="column-image">
+          <img
+            src="https://drive.google.com/uc?export=view&id=1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4"
+            onclick="openModal();currentSlide(1)"
+            class="hover-shadow"
+          />
+        </div>
 
-      <div class="column-text">
-        <h2>Column</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit
-          amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget
-          elementum magna tristique. Quisque vehicula, risus eget aliquam
-          placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
-          Praesent scelerisque tortor sed accumsan convallis.
-        </p>
+        <div class="column-text">
+          <h2>Column</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            sit amet pretium urna. Vivamus venenatis velit nec neque ultricies,
+            eget elementum magna tristique. Quisque vehicula, risus eget aliquam
+            placerat, purus leo tincidunt eros, eget luctus quam orci in velit.
+            Praesent scelerisque tortor sed accumsan convallis.
+          </p>
+        </div>
       </div>
     </div>
 
     <div id="myModal" class="modal">
       <span class="close cursor" onclick="closeModal()">&times;</span>
       <div class="modal-content">
-        <div class="mySlides">
-          <div class="numbertext">1 / 4</div>
-          <div class="imgbox">
-            <img
-              class="center-fit"
-              src="https://drive.google.com/uc?export=view&id=1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4"
-            />
-          </div>
-        </div>
-        <div class="mySlides">
-          <div class="numbertext">2 / 4</div>
-          <div class="imgbox">
-            <img
-              class="center-fit"
-              src="https://drive.google.com/uc?export=view&id=1KFSXNeZP3ulPG_9qImHjlsWmRTvcRUzb"
-            />
-          </div>
-        </div>
+        <div id="main-gallary"></div>
 
         <!-- Next/previous controls -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
         <!-- Caption text -->
-        <div class="caption-container">
+        <!-- <div class="caption-container">
           <p id="caption"></p>
-        </div>
+        </div> -->
 
         <!-- Thumbnail image controls -->
-        <div class="column">
-          <div class="imgbox">
-            <img
-              class="center-fit-demo demo"
-              src="https://drive.google.com/uc?export=view&id=1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4"
-              onclick="currentSlide(1)"
-              alt="Syaro"
-            />
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="imgbox">
-            <img
-              class="center-fit-demo demo"
-              src="https://drive.google.com/uc?export=view&id=1KFSXNeZP3ulPG_9qImHjlsWmRTvcRUzb"
-              onclick="currentSlide(2)"
-              alt="Oh no"
-            />
-          </div>
-        </div>
+        <div id="demo-gallary"></div>
       </div>
     </div>
 
+    <script src="scripts/lightboxLoadScript.js"></script>
+    <script src="scripts/lightboxScript.js"></script>
     <script src="scripts/myScript.js"></script>
   </body>
 </html>

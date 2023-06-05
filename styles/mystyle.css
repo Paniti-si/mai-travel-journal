@@ -8,6 +8,7 @@ body {
 }
 
 .blog-body {
+  margin: auto;
   background: rgb(66, 128, 91);
   background: linear-gradient(
     0deg,
@@ -15,6 +16,9 @@ body {
     rgba(88, 158, 157, 1) 30%,
     rgba(135, 206, 235, 1) 100%
   );
+  width: 100vw;
+  max-width: 1500px;
+  height: 200vh;
 }
 
 * {
@@ -193,13 +197,12 @@ img.hover-shadow {
 }
 
 #banner {
-  display: flex;
   position: relative;
   vertical-align: middle;
   background-color: #ffffff;
   width: 100%;
-  height: 500px;
-  max-height: 50vh;
+  height: 40vh;
+  max-height: 40vh;
   align-items: center;
   justify-content: center;
 }
@@ -214,7 +217,7 @@ img.hover-shadow {
 #front-banner {
   display: flex;
   vertical-align: middle;
-  background-color: #505050;
+  background-color: #292929;
   width: 100%;
   height: 100%;
   text-align: center;

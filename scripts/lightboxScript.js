@@ -21,7 +21,6 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
   var slides = document.getElementsByClassName("mySlides");
   var dots = document.getElementsByClassName("demo");
   if (n > slides.length) {
@@ -30,10 +29,10 @@ function showSlides(n) {
   if (n < 1) {
     slideIndex = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  for (i = 0; i < dots.length; i++) {
+  for (let i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex - 1].style.display = "block";
@@ -46,23 +45,21 @@ window.onclick = function (event) {
   }
 };
 
-function fade(element, isNone = true, time = 10, multiplyer = 0.3) {
+function fade(element) {
   var op = 1; // initial opacity
   var timer = setInterval(function () {
-    if (op <= 0.001) {
+    if (op <= 0.1) {
       clearInterval(timer);
-      if (isNone) {
-        element.style.display = "none";
-      }
+      element.style.display = "none";
     }
     element.style.opacity = op;
     element.style.filter = "alpha(opacity=" + op * 100 + ")";
-    op -= op * multiplyer;
-  }, time);
+    op -= op * 0.3;
+  }, 10);
 }
 
-function unfade(element, time = 10, multiplyer = 0.3, startOp = 0.1) {
-  var op = startOp; // initial opacity
+function unfade(element) {
+  var op = 0.1; // initial opacity
   element.style.display = "block";
   var timer = setInterval(function () {
     if (op >= 1) {
@@ -70,6 +67,6 @@ function unfade(element, time = 10, multiplyer = 0.3, startOp = 0.1) {
     }
     element.style.opacity = op;
     element.style.filter = "alpha(opacity=" + op * 100 + ")";
-    op += op * multiplyer;
-  }, time);
+    op += op * 0.3;
+  }, 10);
 }

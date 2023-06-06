@@ -1,6 +1,7 @@
 html,
 body {
   min-height: 100%;
+  background-color: #333;
 }
 
 body {
@@ -10,13 +11,8 @@ body {
 .blog-body {
   padding: 20px;
   margin: auto;
-  background: rgb(66, 128, 91);
-  background: linear-gradient(
-    0deg,
-    rgba(66, 128, 91, 1) 0%,
-    rgba(88, 158, 157, 1) 30%,
-    rgba(135, 206, 235, 1) 100%
-  );
+  background-color: #f1f1f1;
+
   width: 100vw;
   max-width: 1500px;
   height: 200vh;
@@ -199,7 +195,7 @@ img.hover-shadow {
 }
 
 #banner {
-  background-color: #f1f1f1;
+  background-color: #e7e5e5;
   text-align: center;
   padding: 30px;
 }

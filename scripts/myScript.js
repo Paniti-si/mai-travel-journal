@@ -26,25 +26,23 @@ function unfade(element, time = 10, multiplyer = 0.3, startOp = 0.1) {
   }, time);
 }
 
-function bannerAnimation() {
-  var banner = document.getElementById("front-banner");
-  var bannerText = document.getElementById("banner-text");
-  var bannerImage = document.getElementById("banner-image");
+// function bannerAnimation() {
+//   var banner = document.getElementById("front-banner");
+//   var bannerText = document.getElementById("banner-text");
+//   var bannerImage = document.getElementById("banner-image");
 
-  setTimeout(function () {
-    bannerText.style.fontSize = "5vw";
-    bannerText.innerHTML = "Suan Phueng, Ratchaburi";
-  }, 2000);
+//   setTimeout(function () {
+//     bannerText.style.fontSize = "5vw";
+//     bannerText.innerHTML = "Suan Phueng, Ratchaburi";
+//   }, 2000);
 
-  setTimeout(function () {
-    bannerText.style.fontSize = "10vw";
-    bannerText.innerHTML = "Solo Trip";
-  }, 4000);
+//   setTimeout(function () {
+//     bannerText.style.fontSize = "10vw";
+//     bannerText.innerHTML = "Solo Trip";
+//   }, 4000);
 
-  setTimeout(function () {
-    fade(banner, false, 50, 0.1);
-    unfade(bannerImage, 20, 0.1, 0.5);
-  }, 6000);
-}
-
-bannerAnimation();
+//   setTimeout(function () {
+//     fade(banner, false, 50, 0.1);
+//     unfade(bannerImage, 20, 0.1, 0.5);
+//   }, 6000);
+// }

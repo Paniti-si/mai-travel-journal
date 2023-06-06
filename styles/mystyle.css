@@ -197,44 +197,20 @@ img.hover-shadow {
 }
 
 #banner {
-  position: relative;
-  vertical-align: middle;
-  background-color: #ffffff;
-  width: 100%;
-  height: 40vh;
-  max-height: 40vh;
-  align-items: center;
-  justify-content: center;
-}
-
-#front-banner,
-#banner-image {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-
-#front-banner {
-  display: flex;
-  vertical-align: middle;
-  background-color: #292929;
-  width: 100%;
-  height: 100%;
+  background-color: #f1f1f1;
   text-align: center;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+  padding: 30px;
 }
 
 #banner-text {
-  color: rgb(255, 255, 255);
-  font-size: 10vw;
+  font-size: 5vw;
   font-family: "Courier New", monospace;
 }
 
-#banner-image {
-  opacity: 0.5;
-  display: flex;
-  object-fit: cover;
-  z-index: 1;
+.header {
+  padding: 20px 16px;
+  background: #555;
+  color: #f1f1f1;
+  text-align: center;
+  font-size: 1.3vw;
 }

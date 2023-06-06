@@ -8,6 +8,7 @@ body {
 }
 
 .blog-body {
+  padding: 20px;
   margin: auto;
   background: rgb(66, 128, 91);
   background: linear-gradient(
@@ -80,6 +81,7 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.9);
   opacity: 0.1;
+  z-index: 999;
 }
 
 /* Modal Content */
@@ -207,10 +209,20 @@ img.hover-shadow {
   font-family: "Courier New", monospace;
 }
 
-.header {
+#header {
   padding: 20px 16px;
   background: #555;
   color: #f1f1f1;
   text-align: center;
   font-size: 1.3vw;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .blog-body {
+  padding-top: 102px;
 }

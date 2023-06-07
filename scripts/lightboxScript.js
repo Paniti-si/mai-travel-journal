@@ -2,34 +2,61 @@ var slideIndex = 1;
 
 var imageSet = [
   "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
-  "1KFSXNeZP3ulPG_9qImHjlsWmRTvcRUzb",
+  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
   "1iSCaYxx922nAaPAKb1rXpv5L2VUPrD4K",
 ];
 
-function openModal() {
+var imageSet2 = [
+  "1iSCaYxx922nAaPAKb1rXpv5L2VUPrD4K",
+  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
+  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
+  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
+  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
+  "1iSCaYxx922nAaPAKb1rXpv5L2VUPrD4K",
+  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
+  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
+  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
+  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
+  "1iSCaYxx922nAaPAKb1rXpv5L2VUPrD4K",
+  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
+  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
+  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
+  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
+];
+
+function openModal(img) {
+  let imgSet;
+  switch (img) {
+    case 0:
+      imgSet = imageSet;
+      break;
+    case 1:
+      imgSet = imageSet2;
+      break;
+    default:
+      imgSet = imageSet;
+  }
   var gallaryHtml = "";
   var demoHtml = "";
-  // console.log("test", gallaryHtml);
-  for (let i = 0; i < imageSet.length; i++) {
+  for (let i = 0; i < imgSet.length; i++) {
     gallaryHtml +=
       '<div class="mySlides"> <div class="numbertext">' +
       (i + 1) +
       " / " +
-      imageSet.length +
+      imgSet.length +
       '</div> <div class="imgbox"> <img class="center-fit" src="https://drive.google.com/uc?export=view&id=' +
-      imageSet[i] +
+      imgSet[i] +
       '"/></div></div>';
 
     demoHtml +=
       '<div class="column"><div class="imgbox"><img class="center-fit-demo demo" src="https://drive.google.com/uc?export=view&id=' +
-      imageSet[i] +
+      imgSet[i] +
       '"onclick="currentSlide(' +
       (i + 1) +
       ')"/></div></div>';
   }
   document.getElementById("main-gallary").innerHTML = gallaryHtml;
   document.getElementById("demo-gallary").innerHTML = demoHtml;
-  showSlides(slideIndex);
   unfade(document.getElementById("myModal"));
 }
 
@@ -68,7 +95,6 @@ function showSlides(n) {
 }
 
 window.onclick = function (event) {
-  // console.log("asd", event);
   if (event.target.id === "myModal") {
     fade(document.getElementById("myModal"), true);
   }

@@ -1,46 +1,34 @@
 var slideIndex = 1;
 
 var imageSet = [
-  "1MVzdv07bmXMw_JCTUUPKRSB-fO7I5W1j",
-  "1y7JNGy-8-u13YCNzGvX_Fh0zOUBW2kVG",
-  "1K2HRW7qqMjMObXfPPXYunsKHfQHbkVdT",
-  "1TUhDhj9lCO5peWFkyhz6QKZ5YQzLm55k",
-  "1skJolPlDyOF_tGOAebPyExfpl-YDqBOm",
-  "1uhz8-frai9ohRk1b18RlhCHgdmGXDb4e",
-  "1IIu6IwE0Q8ox6rBkMD8h9ah-8YjKno6z",
-  "14xLX5fkhHrp9tooJ4apvsvcTBdzUUZ5O",
-  "1mNOYwyXjmaSBUaiPtAxbqBxTrkT560-_",
-  "1Fnhz0zj21OXsUEcez5LRh-F1LCeSXK9l",
-  "1xcY8BpzEvyjWehwT3_-LEjXARCWZlXsc",
-  "1eNx2E1K7uDnPx6IQkmt824fWmWeIWv9S",
-  "1ZE1vUkxmrI7KGVxunRFWcsd7sNqG8Pjx",
-  "1xxyrL8FMlt0sf1x4qqLUOe3TYaDpaUCJ",
-  "1JwpwfagDyEVD8BA1Woq20pnyexhyiX4E",
-  "1U_2O4QiqaYDzTWVxc0hFu82QlOsezQ_P",
-  "1GwS6CB2z9KE7Q_RC2Ae6883aWQOPwmNh",
-  "1af3-6nl2AdIpamUCAXY_ki5MMKOshoik",
-  "1VEl4CyX-vk6QyRtsK-8QW3UIdVmrTBm8",
-  "1MfNZX1iw_yrzskKnqbL2quLcxJfEFvaR",
-  "1wVJrDGJtMU8wTNUSiAAwqne2Hkk8m0Nw",
-  "1RQ1YKttsXR7Jv05iz87jijCGajb2Izo3",
+  { alt: "ตลาด", img: "1MVzdv07bmXMw_JCTUUPKRSB-fO7I5W1j" },
+  { alt: "ตลาด", img: "1y7JNGy-8-u13YCNzGvX_Fh0zOUBW2kVG" },
+  { alt: "ตลาด", img: "1K2HRW7qqMjMObXfPPXYunsKHfQHbkVdT" },
+  { alt: "ตลาด", img: "1TUhDhj9lCO5peWFkyhz6QKZ5YQzLm55k" },
+  { alt: "ตลาด", img: "1skJolPlDyOF_tGOAebPyExfpl-YDqBOm" },
+  { alt: "ตลาด", img: "1uhz8-frai9ohRk1b18RlhCHgdmGXDb4e" },
+  { alt: "ตลาด", img: "1IIu6IwE0Q8ox6rBkMD8h9ah-8YjKno6z" },
+  { alt: "ตลาด", img: "14xLX5fkhHrp9tooJ4apvsvcTBdzUUZ5O" },
+  { alt: "ตลาด", img: "1mNOYwyXjmaSBUaiPtAxbqBxTrkT560-_" },
+  { alt: "ตลาด", img: "1Fnhz0zj21OXsUEcez5LRh-F1LCeSXK9l" },
+  { alt: "ตลาด", img: "1xcY8BpzEvyjWehwT3_-LEjXARCWZlXsc" },
+  { alt: "ตลาด", img: "1eNx2E1K7uDnPx6IQkmt824fWmWeIWv9S" },
+  { alt: "ตลาด", img: "1ZE1vUkxmrI7KGVxunRFWcsd7sNqG8Pjx" },
+  { alt: "ตลาด", img: "1xxyrL8FMlt0sf1x4qqLUOe3TYaDpaUCJ" },
+  { alt: "ตลาด", img: "1JwpwfagDyEVD8BA1Woq20pnyexhyiX4E" },
+  { alt: "ตลาด", img: "1U_2O4QiqaYDzTWVxc0hFu82QlOsezQ_P" },
+  { alt: "ตลาด", img: "1GwS6CB2z9KE7Q_RC2Ae6883aWQOPwmNh" },
+  { alt: "ตลาด", img: "1af3-6nl2AdIpamUCAXY_ki5MMKOshoik" },
+  { alt: "ตลาด", img: "1VEl4CyX-vk6QyRtsK-8QW3UIdVmrTBm8" },
+  { alt: "ตลาด", img: "1MfNZX1iw_yrzskKnqbL2quLcxJfEFvaR" },
+  { alt: "ตลาด", img: "1wVJrDGJtMU8wTNUSiAAwqne2Hkk8m0Nw" },
+  { alt: "ตลาด", img: "1RQ1YKttsXR7Jv05iz87jijCGajb2Izo3" },
 ];
 
 var imageSet2 = [
-  "1iSCaYxx922nAaPAKb1rXpv5L2VUPrD4K",
-  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
-  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
-  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
-  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
-  "1iSCaYxx922nAaPAKb1rXpv5L2VUPrD4K",
-  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
-  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
-  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
-  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
-  "1iSCaYxx922nAaPAKb1rXpv5L2VUPrD4K",
-  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
-  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
-  "1ADZ8gUYwrhsHjq4W13altvuXCsixzSc_",
-  "1G7qVWH_nHRx261Bx25FnIn9FqOT_qpx4",
+  { alt: "ตลาด", img: "1MVzdv07bmXMw_JCTUUPKRSB-fO7I5W1j" },
+  { alt: "ตลาด", img: "1y7JNGy-8-u13YCNzGvX_Fh0zOUBW2kVG" },
+  { alt: "ตลาด", img: "1K2HRW7qqMjMObXfPPXYunsKHfQHbkVdT" },
 ];
 
 function openModal(img) {
@@ -64,15 +52,17 @@ function openModal(img) {
       " / " +
       imgSet.length +
       '</div> <div class="imgbox"> <img class="center-fit" src="https://drive.google.com/uc?export=view&id=' +
-      imgSet[i] +
+      imgSet[i]["img"] +
       '"/></div></div>';
 
     demoHtml +=
       '<div class="column"><div class="imgbox"><img class="center-fit-demo demo" src="https://drive.google.com/uc?export=view&id=' +
-      imgSet[i] +
+      imgSet[i]["img"] +
       '"onclick="currentSlide(' +
       (i + 1) +
-      ')" alt="test"' +
+      ')" alt="' +
+      imgSet[i]["alt"] +
+      '"' +
       "/></div></div>";
   }
   document.getElementById("main-gallary").innerHTML = gallaryHtml;

@@ -31,7 +31,7 @@ body {
 
 .column-image img {
   max-width: 100%;
-  max-height: 20vw;
+  max-height: 200px;
   margin: auto;
 }
 
@@ -62,6 +62,7 @@ body {
 .column {
   float: left;
   width: 20%;
+  height: auto;
 }
 
 /* The Modal (background) */
@@ -191,6 +192,7 @@ img.hover-shadow {
 .center-fit-demo {
   max-width: 100%;
   max-height: 10vh;
+  object-fit: cover;
   margin: auto;
 }
 

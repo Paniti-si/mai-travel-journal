@@ -60,13 +60,14 @@ body {
 
 /* Create four equal columns that floats next to eachother */
 .column {
-  float: left;
+  display: inline-block;
   width: 20%;
   height: auto;
 }
 
 /* The Modal (background) */
 .modal {
+  overscroll-behavior: none;
   display: none;
   position: fixed;
   z-index: 999;
@@ -224,4 +225,9 @@ img.hover-shadow {
 
 .sticky + .blog-body {
   padding-top: 102px;
+}
+
+.h-scroll {
+  overflow: auto;
+  white-space: nowrap;
 }

@@ -71,7 +71,7 @@ body {
   display: none;
   position: fixed;
   z-index: 999;
-  padding-top: 100px;
+  padding-top: 80px;
   left: 0;
   top: 0;
   width: 100%;
@@ -220,7 +220,7 @@ img.hover-shadow {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1000;
+  z-index: 800;
 }
 
 .sticky + .blog-body {
@@ -228,6 +228,7 @@ img.hover-shadow {
 }
 
 .h-scroll {
+  background-color: rgba(0, 0, 0, 0.8);
   overflow: auto;
   white-space: nowrap;
 }
